@@ -31,6 +31,10 @@ module Toggl
       end
       alias :workspace_tasks :get_workspace_tasks
 
-    end 
-  end 
-end 
+      def get_workspace_tags(wid)
+        get "/workspaces/#{wid}/tags"
+      end
+      alias :workspace_tags :get_workspace_tags
+    end
+  end
+end
